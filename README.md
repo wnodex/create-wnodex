@@ -1,2 +1,3 @@
 # create-wnodex
-Easily bootstrat wnodex apps
+
+Easily bootstrap wnodex apps

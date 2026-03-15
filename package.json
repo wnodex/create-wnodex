@@ -1,0 +1,53 @@
+{
+  "name": "create-wnodex",
+  "description": "Easily bootstrap wnodex apps",
+  "keywords": [
+    "cli",
+    "wnodex",
+    "expressjs",
+    "express",
+    "express-js"
+  ],
+  "author": {
+    "name": "Davide Di Criscito"
+  },
+  "type": "module",
+  "bin": {
+    "create-wnodex": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "fmt": "tsx ./scripts/fmt.ts",
+    "lint": "tsx ./scripts/lint.ts"
+  },
+  "commitlint": {
+    "extends": [
+      "spellbookx"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  },
+  "prettier": "prettier-config-spellbookx/base",
+  "dependencies": {
+    "@inquirer/prompts": "^8.3.0",
+    "ora": "^9.3.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.4",
+    "@types/node": "^25.5.0",
+    "commitizen": "^4.3.1",
+    "commitlint-config-spellbookx": "^0.11.1",
+    "cz-git": "^1.12.0",
+    "lefthook": "^2.1.4",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
