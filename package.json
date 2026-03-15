@@ -21,7 +21,8 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm --clean",
     "fmt": "tsx ./scripts/fmt.ts",
-    "lint": "tsx ./scripts/lint.ts"
+    "lint": "tsx ./scripts/lint.ts",
+    "release": "LEFTHOOK=\"0\" release-it --ci"
   },
   "commitlint": {
     "extends": [
