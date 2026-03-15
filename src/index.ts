@@ -2,14 +2,18 @@
 
 import { execSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
-import { readFile, rm, writeFile } from 'node:fs/promises';
+import { cp, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import ora from 'ora';
 import picocolors from 'picocolors';
 import { confirm, input, select } from '@inquirer/prompts';
 
 const { cyan, green, red } = picocolors;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Main entry point for the CLI.
@@ -49,19 +53,15 @@ async function main() {
     default: true,
   });
 
-  // 4. Clone Template
-  const spinner = ora('Cloning template...').start();
+  // 4. Copy Template
+  const spinner = ora('Copying template...').start();
   try {
-    execSync(
-      `git clone --depth 1 https://github.com/wnodex/wnodex-template "${projectName}"`,
-      { stdio: 'ignore' }
-    );
+    const templateDir = path.join(__dirname, '../template');
+    await cp(templateDir, targetDir, { recursive: true });
 
-    // Remove .git directory
-    await rm(path.join(targetDir, '.git'), { recursive: true, force: true });
-    spinner.succeed('Template cloned successfully.');
+    spinner.succeed('Template copied successfully.');
   } catch (error) {
-    spinner.fail('Failed to clone template.');
+    spinner.fail('Failed to copy template.');
     console.error(red(error instanceof Error ? error.message : String(error)));
     process.exit(1);
   }

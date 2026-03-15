@@ -17,7 +17,8 @@
     "create-wnodex": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "template"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm --clean",
