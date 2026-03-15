@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.1.1](https://github.com/wnodex/create-wnodex/compare/v0.1.0...v0.1.1) (2026-03-15)
+
 ## 0.1.0 (2026-03-15)
 
 ### Features
