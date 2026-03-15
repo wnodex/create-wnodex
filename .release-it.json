@@ -12,7 +12,8 @@
   },
   "github": {
     "release": true,
-    "releaseName": "v${version}"
+    "releaseName": "v${version}",
+    "push": true
   },
   "npm": {
     "publish": false
