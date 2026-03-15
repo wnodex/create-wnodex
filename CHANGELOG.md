@@ -4,7 +4,7 @@
 
 ### Features
 
-* initialize template from wnodex-template ([f11d2f1](https://github.com/wnodex/create-wnodex/commit/f11d2f1eecb651f019a12a92269c7dc3edc8c5a9))
+- initialize template from wnodex-template ([f11d2f1](https://github.com/wnodex/create-wnodex/commit/f11d2f1eecb651f019a12a92269c7dc3edc8c5a9))
 
 ## [0.1.1](https://github.com/wnodex/create-wnodex/compare/v0.1.0...v0.1.1) (2026-03-15)
 
