@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.0](https://github.com/wnodex/create-wnodex/compare/v0.2.0...v0.3.0) (2026-03-15)
+
+### Features
+
+* copy local template instead of cloning ([9116336](https://github.com/wnodex/create-wnodex/commit/9116336d30e1767f323799ca03b7f872d22dafef))
+
 ## [0.2.0](https://github.com/wnodex/create-wnodex/compare/v0.1.1...v0.2.0) (2026-03-15)
 
 ### Features
