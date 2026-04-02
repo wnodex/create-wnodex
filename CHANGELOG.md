@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.1](https://github.com/wnodex/create-wnodex/compare/v0.3.0...v0.3.1) (2026-04-02)
+
+### Bug Fixes
+
+* improve allowed hosts ([0a8cf09](https://github.com/wnodex/create-wnodex/commit/0a8cf09f1b49f326eb3a88c742cb6a2bd8b89351))
+
 ## [0.3.0](https://github.com/wnodex/create-wnodex/compare/v0.2.0...v0.3.0) (2026-03-15)
 
 ### Features
