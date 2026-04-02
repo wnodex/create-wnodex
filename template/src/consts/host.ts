@@ -1,12 +1,27 @@
 import { PROD } from './prod.js';
 
-// TODO: CHANGE ME
-export const HOSTNAME = 'dcdavidev';
-// TODO: CHANGE ME
-export const HOST_EXT = 'me';
+/**
+ * List of allowed hostnames and their extentions for CORS and other host-based checks.
+ */
+export const ALLOWED_HOSTS = [
+  // TODO: change me to your actual domain(s) and uncomment the line below
+  { name: 'example', ext: 'com' },
+  // { name: 'example', ext: 'local' },
+];
 
-export const HOST = `${HOSTNAME}.${HOST_EXT}`;
+const domainList = ALLOWED_HOSTS
+  .map(host => `${host.name}\\.${host.ext}`)
+  .join('|');
 
+const localList = ALLOWED_HOSTS
+  .map(host => `${host.name}\\.local`)
+  .join('|');
+
+/**
+ * Combined regex pattern for all domains.
+ * In production: supports www and the list of domains.
+ * In dev: supports www, .local variants, and localhost.
+ */
 export const DOMAIN_PATTERN = PROD
-  ? HOST.replaceAll('.', String.raw`\.`)
-  : String.raw`${HOSTNAME}\.local|localhost`;
+  ? `(?:www\\.)?(?:${domainList})`
+  : `(?:www\\.)?(?:${domainList}|${localList})|localhost`;

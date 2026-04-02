@@ -1,7 +1,6 @@
 {
   "extends": "@dcdavidev/tsconfig/express-ssr.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "./dist",
     "rootDir": "./src",
     "paths": {
